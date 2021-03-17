@@ -17,3 +17,7 @@ apt update
 
 # Instala la aplicacion de Acceso Remoto
 apt install -y anydesk
+
+
+# establece contraseña o habilita pestaña de seguridad para acceso no vigilado
+# echo NuevaClave  | anydesk --set-password
