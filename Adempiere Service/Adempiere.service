@@ -1,0 +1,14 @@
+# Servicio para arranque de ADempiere Web
+[Unit]
+Description=Servicio de arranque automatico de ADempier
+After=network.target
+#ConditionPathExists=/opt/Apps/Adempieree
+
+[Service]
+Restart=always
+RestartSec=3
+ExecStart=/bin/sh /opt/Apps/Start_ADempiere.sh
+ExecStop=/bin/sh /opt/Apps/Stop_ADempiere.sh
+
+[Install]
+WantedBy=multi-user.target
