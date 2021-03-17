@@ -11,7 +11,7 @@ WORKSPACE="/opt/Apps"
 cp ./clean-log.sh $WORKSPACE/
 
 # da permisos completos para ejecutar y modificar scripts
-chmod 777 $WORKSPACE/clean-log.sh
+chmod 777 $WORKSPACE/clean-ad-log.sh
 
 
 (crontab -l 2>/dev/null || true; echo "# Se ejecutara mensualmente") | crontab -
