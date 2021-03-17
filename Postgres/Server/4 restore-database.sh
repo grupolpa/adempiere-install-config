@@ -6,12 +6,14 @@
 ##########################################################################
 ./env.sh
 
+export $PGPASSWORD
+
 # crea la base de datos
 psql -c CREATE DATABASE $DB
     WITH ENCODING='UNICODE'
     OWNER=$USER;
 
--- PGPASSWORD=$dbPwd createdb -h $dbHost -p $dbPort -E UNICODE -O $dbUser -U $dbUser $dbName
+# PGPASSWORD=$PGPASSWORD createdb -h $HOST -p $PORT -E UNICODE -O $USER -U $USER $DB
 
 # nombre del archivo de la base de datos, puede ser .dmp o .backup
 DATABASE_FILE='./seed.dmp'

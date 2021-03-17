@@ -20,6 +20,7 @@ mkdir -p /var/lib/jvm/java
 tar -C /var/lib/jvm/java -zxvf $JAVA_BINARY
 
 JAVA_HOME="/var/lib/jvm/java/jdk1.7.0_80"
+export $JAVA_HOME
 # establece las variables de entorno
 echo "JAVA_HOME=${JAVA_HOME}" >> /etc/profile
 echo "export JAVA_HOME=${JAVA_HOME}" >> /etc/profile
@@ -32,7 +33,8 @@ echo "export PATH=\"$PATH:${JAVA_JOME}/bin\"" >> /etc/profile
 
 # permisos de ejecución al directorio de java 
 chmod +x -R $JAVA_HOME
-chmod +x -R /usr/local
+chmod +x -R /usr/local/java
+chmod +x -R /usr/local/javac
 
 #TODO: Revisar advertencias de las alternativas
 # instala las las alternativas de java
@@ -49,3 +51,7 @@ update-alternatives --set javac $JAVA_JOME/bin/javac
 # update-java-alternatives -s $JAVA_JOME # no funciona
 
 java -version
+
+# elimina enlaces simbolicos si da error 
+# rm -r /usr/bin/java
+# rm -r /usr/bin/javac

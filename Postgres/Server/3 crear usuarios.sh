@@ -11,6 +11,8 @@ service postgresql restart
 
 ./env.sh
 
+export $PGPASSWORD
+
 $NEW_PASSWORD=$PGPASSWORD
 
 # Establecer nueva contrase;a para postgres

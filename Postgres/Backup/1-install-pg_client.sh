@@ -1,6 +1,6 @@
 #!/bin/sh
 ##########################################################################
-#  Instalar PostgresSQL                                                 ##
+#  Instalar PostgresSQL Client                                          ##
 #                                                                       ##
 #  Edwin Betancourt EdwinBetanc0rt@outlook.com                          ##
 ##########################################################################
