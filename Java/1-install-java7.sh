@@ -11,7 +11,7 @@ apt-get remove --auto-remove openjdk*
 # eliminar Openjdk junto con las dependencias y sus archivos de configuración
 #apt-get purge --auto-remove openjdk*
 
-
+# Archivo de instalacion del paquete Java
 JAVA_BINARY=jdk-7u80-linux-x64.tar.gz
 
 # descomprime java en la ubicacion de las java virtual machine

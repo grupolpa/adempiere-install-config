@@ -29,3 +29,7 @@ chmod 777 $WORKSPACE/clean-ad-log.sh
 # echo "@monthly $WORKSPACE/clean-log.sh" >> /var/spool/cron/crontabs/$USER
 
 # chmod 600 /var/spool/cron/crontabs/$USER
+
+
+# limpia la carpeta de instalacion de los log y temporales
+. ./clean-ad-log.sh
