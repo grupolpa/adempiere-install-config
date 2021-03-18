@@ -1,23 +1,13 @@
 #!/bin/sh
 ################################################################################
-#  Instalar acceso remoto AnyDesk                                             ##
+#  Establecer contraseña para acceso desatendido AnyDesk                      ##
 #  http://deb.anydesk.com/howto.html                                          ##
 #                                                                             ##
 #  Edwin Betancourt EdwinBetanc0rt@outlook.com                                ##
 ################################################################################
 
-# Instala las llaves del repositorio
-wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
-
-# Agrega el repositorio
-echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
-
-# Actualiza la lista de aplicaciones disponibles de los repositorios
-apt update
-
-# Instala la aplicacion de Acceso Remoto
-apt install -y anydesk
-
+NUEVA_CLAVE="123456" # Cambiar contraseña
+export $NUEVA_CLAVE
 
 # establece contraseña o habilita pestaña de seguridad para acceso no vigilado
-# echo NuevaClave  | anydesk --set-password
+echo $NuevaClave  | anydesk --set-password

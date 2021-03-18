@@ -5,11 +5,16 @@
 #  Edwin Betancourt EdwinBetanc0rt@outlook.com                          ##
 ##########################################################################
 
-# Crea la carpeta de trabajo
-mkdir -p /opt/Apps
+WORKSPACE="/opt/Apps/"
 
-cp ./Start_ADempiere.sh /opt/Apps/
-cp ./Stop_ADempiere.sh /opt/Apps/
+# Crea la carpeta de trabajo si no existe
+if [ ! -e $WORKSPACE ]; then
+    mkdir -p $WORKSPACE
+fi
+
+# copia los archivos a la carpeta de trabajo
+cp ./Start_ADempiere.sh $WORKSPACE
+cp ./Stop_ADempiere.sh $WORKSPACE
 
 # copia el archivo de servicio a la carpera del sistema de servicios
 cp ./Adempiere.service /etc/systemd/system/
@@ -17,8 +22,8 @@ cp ./Adempiere.service /etc/systemd/system/
 # Habilita el servicio de adempiere para que se inicie con el sistema operativo
 systemctl enable Adempiere
 
-# Permisos a la carpeta
-chmod 777 -R /opt/Apps
+# Concede permisos al contenido de la carpeta
+chmod 777 -R $WORKSPACE
 
 # Reiniciar el servicio de adempiere
 systemctl restart Adempiere

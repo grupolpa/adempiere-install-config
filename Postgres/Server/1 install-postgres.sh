@@ -18,4 +18,3 @@ apt-get update
 # Install the 9.6 version of PostgreSQL.
 # apt-get -y install postgresql-9.6-server postgresql-9.6 postgresql-client-9.6
 apt-get -y install postgresql-9.6 postgresql-client-9.6
-

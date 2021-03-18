@@ -6,7 +6,7 @@
 ##########################################################################
 
 # Se ubica en la carpeta de adempiere
-if [ $ADEMPIERE_HOME ]; then
+if [ -n $ADEMPIERE_HOME ]; then
     cd $ADEMPIERE_HOME/
 else
     cd /opt/Apps/Adempiere/

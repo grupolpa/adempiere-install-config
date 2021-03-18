@@ -12,7 +12,6 @@ apt-get remove --auto-remove openjdk*
 #apt-get purge --auto-remove openjdk*
 
 
-
 JAVA_BINARY=jdk-7u80-linux-x64.tar.gz
 
 # descomprime java en la ubicacion de las java virtual machine

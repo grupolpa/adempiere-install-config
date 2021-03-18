@@ -7,6 +7,12 @@
 
 WORKSPACE="/opt/Apps"
 
+# Crea la carpeta de trabajo si no existe
+if [ ! -e $WORKSPACE ]; then
+    mkdir -p $WORKSPACE
+fi
+
+
 # copiar scripts a carpeta de trabajo
 cp ./clean-log.sh $WORKSPACE/
 

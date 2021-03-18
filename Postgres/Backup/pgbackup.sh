@@ -20,6 +20,6 @@ pg_dump -h $HOST -p $PORT -U $USER -d $DB -Fc -b -v -f $BACKUP_DIR$BACKUP_FILE
 
 
 echo "***************************************************************"
-echo "****  Copia de seguridad de la BD generada en el archivo ******"
+echo "**** Copia de seguridad de la BD generada en el archivo: ******"
 echo "****      ${BACKUP_DIR}${BACKUP_FILE}      ****"
 echo "***************************************************************"
