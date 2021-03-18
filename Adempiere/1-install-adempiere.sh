@@ -23,12 +23,20 @@ cd $WORKSPACE
 # descomprime los archivos
 unzip -oq Adempiere.zip
 
+# si existe cambia el archivo de conexion
+if [ -e Adempiere.properties ]; then
+    mv Adempiere.properties Adempiere_old.properties
+fi
+# si existe cambia el archivo de variables de entorno
+if [ -e AdempiereEnv.properties ]; then
+    mv AdempiereEnv.properties AdempiereEnv_old.properties
+fi
+
 # concede los permisos completos
-chmod 777 -R $ $WORKSPACE
+chmod 777 -R $WORKSPACE
 
 # establece la variable de entorno
 echo "export ADEMPIERE_HOME=/opt/Apps/Adempiere" >> /etc/profile
 
 # source /etc/profile
 . /etc/profile
-

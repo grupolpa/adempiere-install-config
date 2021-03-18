@@ -19,11 +19,11 @@ cp ./Stop_ADempiere.sh $WORKSPACE
 # copia el archivo de servicio a la carpera del sistema de servicios
 cp ./Adempiere.service /etc/systemd/system/
 
-# Habilita el servicio de adempiere para que se inicie con el sistema operativo
-systemctl enable Adempiere
-
 # Concede permisos al contenido de la carpeta
 chmod 777 -R $WORKSPACE
 
+# Habilita el servicio de adempiere para que se inicie con el sistema operativo
+systemctl enable Adempiere
+
 # Reiniciar el servicio de adempiere
-systemctl restart Adempiere
+# systemctl restart Adempiere

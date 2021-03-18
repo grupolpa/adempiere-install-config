@@ -12,6 +12,8 @@ else
     cd /opt/Apps/Adempiere/
 fi
 
+# TODO: Verificar si existen las carpetas y archivos log
+
 # elimina los log de la raiz de adempiere
 rm ./*.log
 rm ./log/*.log

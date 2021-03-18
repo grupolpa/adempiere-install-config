@@ -19,7 +19,8 @@ mkdir -p /var/lib/jvm/java
 tar -C /var/lib/jvm/java -zxvf $JAVA_BINARY
 
 JAVA_HOME="/var/lib/jvm/java/jdk1.7.0_80"
-export $JAVA_HOME
+# export $JAVA_HOME
+
 # establece las variables de entorno
 echo "JAVA_HOME=${JAVA_HOME}" >> /etc/profile
 echo "export JAVA_HOME=${JAVA_HOME}" >> /etc/profile
