@@ -15,3 +15,4 @@ fi
 
 # detiene el servicio
 sh ./RUN_Server2Stop.sh
+
