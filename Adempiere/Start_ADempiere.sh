@@ -13,5 +13,6 @@ else
     cd /opt/Apps/Adempiere/utils
 fi
 
-# detiene el servicio
-sh ./RUN_Server2.sh
+# inicia el servicio
+# sh ./RUN_Server2.sh
+. ./RUN_Server2.sh

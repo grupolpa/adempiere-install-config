@@ -1,6 +1,6 @@
 # Servicio para arranque de ADempiere Web
 [Unit]
-Description=Servicio de arranque automatico de ADempier
+Description=Servicio de arranque automatico de ADempiere
 After=network.target
 #ConditionPathExists=/opt/Apps/Adempieree
 
