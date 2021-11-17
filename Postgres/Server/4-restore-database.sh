@@ -12,7 +12,7 @@ export $PGPASSWORD
 # crea la base de datos
 psql -c CREATE DATABASE $DB
     WITH ENCODING='UNICODE'
-    OWNER=$USER;
+    OWNER=$AD_USER;
 
 # PGPASSWORD=$PGPASSWORD createdb -h $HOST -p $PORT -E UNICODE -O $USER -U $USER $DB
 
@@ -22,7 +22,7 @@ psql -c CREATE DATABASE $DB
 DATABASE_FILE='./seed.dmp'
 
 # restaura el archivo en la base de datos
-pg_restore -h $HOST -p $PORT -d $DB -U $USER -d $DATABASE_FILE;
+pg_restore -h $HOST -p $PORT -d $DB -U $AD_USER -d $DATABASE_FILE;
 
 echo "Base de Datos Restaurada"
 # https://sqlbak.com/blog/how-to-automate-postgresql-database-backups-in-linux

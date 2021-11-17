@@ -15,6 +15,13 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key a
 # Update the package lists:
 apt-get update
 
+VERSION=$1
+# change back to calling directory
+if [ -n $VERSION ]
+then
+	VERSION="-${VERSION}"
+fi
+
 # Install the 9.6 version of PostgreSQL.
 # apt-get -y install postgresql-9.6-server postgresql-9.6 postgresql-client-9.6
-apt-get -y install postgresql-9.6 postgresql-client-9.6
+apt-get -y install postgresql${VERSION} postgresql-client${VERSION}

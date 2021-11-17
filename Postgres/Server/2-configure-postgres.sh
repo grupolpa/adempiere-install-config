@@ -46,6 +46,6 @@ echo "host all all $NETWORK md5" >> /etc/postgresql/*/main/pg_hba.conf
 # TODO: Agregar expresion regular que lea el inicio local y reemplace al final peer por trust
 # echo "local all all trust" >> /etc/postgresql/*/main/pg_hba.conf
 
-# Para que tome los cambios
-service postgresql restart
-# systemctl reload postgresql
+# Reiniciar servicio para que tome los cambios
+#service postgresql restart
+systemctl restart postgresql
