@@ -12,13 +12,13 @@ apt-get remove --auto-remove openjdk*
 #apt-get purge --auto-remove openjdk*
 
 # Archivo de instalacion del paquete Java
-JAVA_BINARY=jdk-7u80-linux-x64.tar.gz
+JAVA_BINARY=OpenJDK11U-jdk_x64_linux_hotspot_11.0.13_8.tar.gz
 
 # descomprime java en la ubicacion de las java virtual machine
 mkdir -p /var/lib/jvm/java
 tar -C /var/lib/jvm/java -zxvf $JAVA_BINARY
 
-JAVA_HOME="/var/lib/jvm/java/jdk1.7.0_80"
+JAVA_HOME="/var/lib/jvm/java/jdk-11.0.13+8"
 # export $JAVA_HOME
 
 # establece las variables de entorno
@@ -38,9 +38,9 @@ chmod +x -R /usr/local/javac
 
 #TODO: Revisar advertencias de las alternativas
 # instala las las alternativas de java
-update-alternatives --install /usr/bin/java java $JAVA_HOME/bin/java 1
-update-alternatives --install /usr/bin/javac javac $JAVA_HOME/bin/javac 1
-# update-alternatives --install /usr/bin/javaws javaws $JAVA_HOME/bin/javaws 1
+update-alternatives --install /usr/bin/java java $JAVA_HOME/bin/java 3
+update-alternatives --install /usr/bin/javac javac $JAVA_HOME/bin/javac 3
+# update-alternatives --install /usr/bin/javaws javaws $JAVA_HOME/bin/javaws 3
 
 # configura de modo interativo las alternativas java
 # update-alternatives --config java
