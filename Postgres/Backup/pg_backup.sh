@@ -1,6 +1,6 @@
 #!/bin/bash
 ##########################################################################
-#  Configurar PostgresSQL                                               ##
+#  Crear Respaldo PostgresSQL                                           ##
 #                                                                       ##
 #  Edwin Betancourt EdwinBetanc0rt@outlook.com                          ##
 ##########################################################################
@@ -15,8 +15,11 @@ cd /opt/Apps/backup
 # exporta la contraseña para que no sea solicitada
 export PGPASSWORD
 
-if [ -n $1 ]
+# Si existe un parametro lo toma como nombre de base de datos
+if [ $1 ]
 then
+    echo "Se cambia la base de datos por defecto ${DB}  --->  $1"
+    echo ""
     DB=$1
     BACKUP_FILE="${DB}_${DATE}.backup"
 fi
