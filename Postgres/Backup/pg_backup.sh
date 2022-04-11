@@ -15,8 +15,8 @@ cd /opt/Apps/backup
 # exporta la contraseña para que no sea solicitada
 export PGPASSWORD
 
-# Si existe un parametro lo toma como nombre de base de datos
-if [ $1 ]
+# si existe un parametro y no esta vacio, lo toma como nombre de base de datos
+if [ -n $1 ] && [ ! -z $1 ]
 then
     echo "Se cambia la base de datos por defecto ${DB}  --->  $1"
     echo ""
