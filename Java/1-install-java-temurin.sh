@@ -5,6 +5,12 @@
 #  Edwin Betancourt EdwinBetanc0rt@outlook.com                          ##
 ##########################################################################
 
+# Para instalar una versión especifica ejecutar por ejemplo:
+# sh 1-install-java-temurin.sh 8
+# donde el ultimo número establece la versión, si no se especifica tomara la
+# versión 11 por defecto, solo compatible con las versiones 9, 11 y 17
+
+
 # eliminar Openjdk junto con las dependencias
 apt-get remove --auto-remove openjdk*
 
